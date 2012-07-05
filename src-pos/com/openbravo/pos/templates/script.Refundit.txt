@@ -1,0 +1,18 @@
+// script.Refundit Script
+
+    import java.util.Properties;
+    import com.openbravo.format.Formats;
+    import com.openbravo.pos.ticket.TicketLineInfo;
+    import com.openbravo.pos.ticket.TicketProductInfo;
+
+    index = sales.getSelectedIndex();
+    if (index >= 0) {
+        for (int i= 0; i < ticket.getLinesCount(); i++) {
+        row = ticket.getLine(i);
+        double value = -1.0;
+        row.setMultiply(value);
+
+        ticket.ticketType = 1;
+
+       }
+    }

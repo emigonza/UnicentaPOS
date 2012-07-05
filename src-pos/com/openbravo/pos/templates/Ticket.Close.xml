@@ -1,0 +1,14 @@
+import com.openbravo.pos.payment.PaymentInfo;
+import javax.swing.JOptionPane;
+
+boolean isCash = false;
+String change = "";
+PaymentInfo p = ticket.payments.getFirst();
+
+if ("cash".equals(p.getName())) {
+    isCash = true;
+    change = p.printChange();
+}
+if(isCash) {
+    JOptionPane.showMessageDialog(null, "Return " + change, "Change", JOptionPane.PLAIN_MESSAGE);
+}

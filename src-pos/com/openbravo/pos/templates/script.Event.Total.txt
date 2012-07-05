@@ -1,0 +1,23 @@
+// Stop payment when all items not sent
+
+for(int i= 0; i < ticket.getLinesCount(); i++){
+	line = ticket.getLine(i);
+
+
+	// Set Discount(printkb=NULL) to N/A so it does not error on next section.
+	if ($ticketline.isProductKitchen()){
+		line.setProperty("sendstatus", "No");
+	}
+
+
+	if(line.getProperty("sendstatus").equals("No")){
+		mySent = "No";
+	}
+}
+
+if (mySent == "No"){
+	javax.swing.JOptionPane.showMessageDialog(null, "Before closing ticket, please send order to kitchen", "HOIATUS", JOptionPane.WARNING_MESSAGE);
+	return "Cancel";
+}else{
+	return null;
+}

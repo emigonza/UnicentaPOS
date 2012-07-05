@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+    uniCenta oPOS - Touch friendly Point Of Sale
+    Copyright (c) 2009-2011 uniCenta.
+    http://sourceforge.net/projects/unicentaopos
+
+    This file is part of uniCenta oPOS.
+
+    uniCenta oPOS is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    uniCenta oPOS is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with uniCenta oPOS.  If not, see <http://www.gnu.org/licenses/>.
+ -->
+<configuration>
+<!-- Ticket Button Bar - Show Images Only -->
+
+<!-- Un-comment line below if you require Refunds -->
+<!-- <button key="button.refundit" image="img.refundit" code="script.Refundit"/> -->
+
+<!-- Un-comment either line below to use Line or Total Discount -->
+<!-- <button key="button.discount" image="img.discount" code="script.totaldiscount"/> -->    
+    <button key="button.linediscount" image="img.discount" code="script.linediscount"/>
+
+<!-- Un-comment line to include Waiter name -->
+<!-- <button key="button.setperson" image="img.user" code="script.SetPerson"/> -->
+
+    <button key="button.sendorder" image="img.kit_print" code="script.SendOrder"/>
+    <button key="button.print" image="img.ticket_print" template="Printer.TicketPreview"/>
+    <button key="button.opendrawer" image="img.cashdrawer" template="Printer.OpenDrawer"/>
+
+<!-- Ticket Button Bar - Text Only -->
+    <!-- <button key="button.refundit" name="button.refundit" code="script.Refundit"/> -->
+    <!-- <button key="button.linediscount" name="button.linediscount" code="script.linediscount"/> -->
+    <!-- <button key="button.discount" name="button.totaldiscount" code="script.totaldiscount"/> -->
+    <!-- <button key="button.setperson" name="button.setperson" code="script.SetPerson"/> -->
+    <!-- <button key="button.sendorder" name="button.sendorder" code="script.SendOrder"/> -->
+    <!-- <button key="button.print" titlekey="button.print" template="Printer.TicketPreview"/> -->
+    <!-- <button key="button.opendrawer" titlekey="button.opendrawer" template="Printer.OpenDrawer"/> -->
+<!-- End of Ticket Button Bar config -->
+
+
+    <!-- <event key="ticket.close" code="ticket.close"/> -->
+    <!-- <event key="ticket.change" code="event.change"/> -->
+    <!-- <event key="ticket.addline" code="event.addline"/> -->
+    <!-- <event key="ticket.removeline" code="event.removeline"/> -->
+    <!-- <event key="ticket.setline" code="event.setline"/> -->
+    <!-- <event key="ticket.show" code="event.show"/> -->
+    <!-- <event key="ticket.total" code="script.Event.Total"/> -->
+ 
+<!-- Stock Level Checking uncomment the 2 x lines below --> 
+    <!-- <event key="ticket.addline" code="script.StockCurrentAdd"/> -->
+    <!-- <event key="ticket.setline" code="script.StockCurrentSet"/> -->
+<!-- End of Stock Level Checking -->    
+
+<!-- Maximum Category height for 800x480 for PDA in Full Screen mode -->
+<!-- <cat-height value="100" /> -->
+<!-- Default - Maximum Category height for 800x600 or 1024x600 for Tablet in Full Screen mode -->
+    <cat-height value="205" />
+<!-- Maximum Category height for 1024x768 in Full Screen mode -->
+<!--	<cat-height value="370" />  -->
+<!-- Maximum Category height for 1280x1024 in Full Screen mode -->
+<!--    <cat-height value="640" /> -->
+
+<!-- Change Product button size in Sales screen -->
+    <img-width value="64"/>
+    <img-height value="48"/>
+
+    <taxesincluded value="true"/>
+    <!-- <printselected value="true"/> -->    
+    <!-- <taxcategoryid value="001"/> -->
+    <!-- <pricevisible value="true" /> -->
+</configuration>

@@ -1,0 +1,10 @@
+// script.setPerson - set Waiter's name
+
+
+value = javax.swing.JOptionPane.showInputDialog("Enter Waiter", ticket.getProperty("person")); 
+
+if (value != null) { 
+
+        ticket.setProperty("person", value); 
+
+}
